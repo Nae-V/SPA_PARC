@@ -2,17 +2,15 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>SPA_TEST</title>
+        <title>Redirecting...</title>
+        <meta http-equiv="refresh" content="0; url=/" />
+        <script>
+            const path = window.location.pathname;
+            sessionStorage.setItem('redirectPath', path);
+            window.location.replace('/');
+        </script>
     </head>
     <body>
-        <nav>
-            <a href="/" data-link>Home</a>
-            <a href="/list" data-link>List</a>
-        </nav>
-
-        <div id="app"></div>
-
-        <script src="main.js"></script>
+        Redirecting...
     </body>
 </html>

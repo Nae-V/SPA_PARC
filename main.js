@@ -18,4 +18,12 @@ document.addEventListener('click', (e) => {
     }
 });
 
+const savedPath = sessionStorage.getItem('redirectPath');
+if (savedPath) {
+    sessionStorage.removeItem('redirectPath');
+    render(savedPath);
+} else {
+    render(window.location.pathname);
+}
+
 render(window.location.pathname);
